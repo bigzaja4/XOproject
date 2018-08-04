@@ -10,10 +10,11 @@ package Model;
  * @author bigza
  */
 public class Table {
+
     private int player1Score;
     private int player2Score;
     private int tieScore;
-    private int turn;
+    private int turn = 1;
 
     public Table(int player1Score, int player2Score, int tieScore, int turn, int[] boardPosition) {
         this.player1Score = player1Score;
@@ -22,6 +23,7 @@ public class Table {
         this.turn = turn;
         this.boardPosition = boardPosition;
     }
+    
     private int[] boardPosition;
 
     public Table() {
@@ -72,6 +74,18 @@ public class Table {
     public void setBoardPosition(int[] boardPosition) {
         this.boardPosition = boardPosition;
     }
-    
-    
+
+    public boolean checkTurnIsFive() {
+        boolean check = false;
+        if(turn >= 5){
+            check = true;
+        }
+        return check;
+    }
+
+    public void markPosition() {
+        turn++;
+    }
+
+   
 }
