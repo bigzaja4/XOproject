@@ -1,37 +1,52 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<!doctype html>
 <html>
     <head>
-        <title>Tic-Tac-Toe</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="game.css" type="text/css" media="screen" charset="utf-8">
     </head>
+
     <body>
-        <h1>Tic-Tac-Toe</h1>
-        <div>
-            <table>
+        <div class="center">
+            <h1>Tic-Tac-Toe</h1>
+            <table id="board">
                 <tr>
-                    <td><p>0<p></td>
-                    <td><p>1<p></td>
-                    <td><p>2<p></td>
+                    <td id="R1_C1"></td>
+                    <td id="R1_C2" ></td>
+                    <td id="R1_C3"></td>
                 </tr>
-                
                 <tr>
-                    <td><p>3<p></td>
-                    <td><p>4<p></td>
-                    <td><p>5<p></td>
+                    <td id="R2_C1"></td>
+                    <td id="R2_C2"></td>
+                    <td id="R2_C3"></td>
                 </tr>
-                
                 <tr>
-                    <td><p>6<p></td>
-                    <td><p>7<p></td>
-                    <td><p>8<p></td>
+                    <td id="R3_C1"></td>
+                    <td id="R3_C2"></td>
+                    <td id="R3_C3"></td>
                 </tr>
             </table>
+
+
+
+            <div class="white-font">
+                <!--                <form>-->
+                <div class="divF">
+                    <h2>Player 1 (X)</h2>
+                    <label for="player1Score">0</label>
+                </div>
+
+                <div class="divF">
+                    <h2>Tie</h2>
+                    <label for="tieScore">0</label>
+                </div>
+
+                <div class="divF">
+                    <h2>Player 2 (O)</h2>
+                    <label for="player2Score">0</label>
+                </div>
+            </div>
         </div>
+
     </body>
 </html>
