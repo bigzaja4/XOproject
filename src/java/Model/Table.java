@@ -14,18 +14,22 @@ public class Table {
     private int player1Score;
     private int player2Score;
     private int tieScore;
+
     private int turn = 1;
 
-    public Table(int player1Score, int player2Score, int tieScore, int turn, int[] boardPosition) {
+    private Integer[] boardPosition = new Integer[9];
+
+
+    public Table(int player1Score, int player2Score, int tieScore, int turn) {
         this.player1Score = player1Score;
         this.player2Score = player2Score;
         this.tieScore = tieScore;
         this.turn = turn;
-        this.boardPosition = boardPosition;
     }
-    
-    private int[] boardPosition;
 
+    
+
+    
     public Table() {
     }
 
@@ -66,12 +70,45 @@ public class Table {
     public void setTurn(int turn) {
         this.turn = turn;
     }
+    
+    public void setBoardPosition(Integer position,int player){
+        boardPosition[position] = player;
+    }
+    
+    public boolean markPosition(String position){
+        int realPosition = 0;
+        if (position.equals("R1_C1")) {
+            realPosition=0;
+        }else if(position.equals("R1_C2")){
+            realPosition=1;
+        }else if(position.equals("R1_C3")){
+            realPosition=2;
+        }else if(position.equals("R2_C1")){
+            realPosition=3;
+        }else if(position.equals("R2_C2")){
+            realPosition=4;
+        }else if(position.equals("R2_C3")){
+            realPosition=5;
+        }else if(position.equals("R3_C1")){
+            realPosition=6;
+        }else if(position.equals("R3_C2")){
+            realPosition=7;
+        }else if(position.equals("R3_C3")){
+            realPosition=8;
+        }
+        
+        if ( boardPosition[realPosition] == null) {
+            boardPosition[realPosition] = turn%2;
+            return true;
+        }
+        return false;
+    }
 
-    public int[] getBoardPosition() {
+    public Integer[] getBoardPosition() {
         return boardPosition;
     }
 
-    public void setBoardPosition(int[] boardPosition) {
+    public void setBoardPosition(Integer[] boardPosition) {
         this.boardPosition = boardPosition;
     }
 
@@ -82,9 +119,31 @@ public class Table {
         }
         return check;
     }
-    
   
+    public boolean isWinByHorizontal(Integer position,int player){
+        if(position == 0 || position == 1 || position == 2){
+            for(int i = 0;i<=2;i++){
+                if(boardPosition[i] != player){
+                    return false;
+                }
+            }
+        }
+        else if(position == 3 || position == 4 || position == 5){
+            for(int i = 3;i<=5;i++){
+                if(boardPosition[i] != player){
+                    return false;
+                }
+            }
+        }
+        else if(position == 6 || position ==7 || position == 8){
+            for(int i = 6;i<=8;i++){
+                if(boardPosition[i] != player){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
 
-   
 }

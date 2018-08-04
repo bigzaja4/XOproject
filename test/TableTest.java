@@ -3,25 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test;
-
 import Model.Table;
+import org.junit.Assert;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-
-public class TableTest {
-    
-    /*@Test
-    public void checkTurnIsFiveTestTrue() {
-        Table table = new Table();
-        
-        assertEquals(true,table.checkTurnIsFive());
-    }*/
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+/**
+ *
+ * @author bigza
+ */
+public class TableTest {  
+    @Test
+    public void markPositionTrueTest(){
+        Table board = new Table();
+        board.setBoardPosition(0, 0);
+        String position = "R1_C1";
+        Assert.assertEquals(false,board.markPosition(position));
+    }
     
     @Test
     public void startGameCountTurnShouldEqualOne(){
         Table table = new Table();
         assertEquals(1, table.getTurn());
     }
+    
 }

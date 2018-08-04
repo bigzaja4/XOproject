@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/bigza/Documents/NetBeansProjects/XOproject/web/XO.jsp</file>
-            <file>file:/C:/Users/bigza/Documents/NetBeansProjects/XOproject/src/java/Model/Table.java</file>
+            <file>file:/D:/XOproject/src/java/Servlet/XOServlet.java</file>
+            <file>file:/D:/XOproject/test/TableTest.java</file>
+            <file>file:/D:/XOproject/src/java/Model/Table.java</file>
+            <file>file:/D:/XOproject/web/XO.jsp</file>
+            <file>file:/D:/XOproject/web/index.html</file>
+            <file>file:/D:/XOproject/test/HorizontalTest.java</file>
         </group>
     </open-files>
 </project-private>
