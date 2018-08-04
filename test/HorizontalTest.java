@@ -19,7 +19,7 @@ public class HorizontalTest {
     @Test
    public void isWinByHorizontalTest(){
        Table table = new Table();
-       int[] position = new int[9];
+       Integer[] position = new Integer[9];
        position[1] = 1;
        position[3] = 2;
        position[2] = 1;
