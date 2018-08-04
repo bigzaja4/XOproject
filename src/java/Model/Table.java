@@ -13,6 +13,16 @@ public class Table {
     private int player1Score;
     private int player2Score;
     private int tieScore;
+    private int turn;
+
+    public Table(int player1Score, int player2Score, int tieScore, int turn, int[] boardPosition) {
+        this.player1Score = player1Score;
+        this.player2Score = player2Score;
+        this.tieScore = tieScore;
+        this.turn = turn;
+        this.boardPosition = boardPosition;
+    }
+    private int[] boardPosition;
 
     public Table() {
     }
@@ -46,5 +56,22 @@ public class Table {
     public void setTieScore(int tieScore) {
         this.tieScore = tieScore;
     }
+
+    public int getTurn() {
+        return turn;
+    }
+
+    public void setTurn(int turn) {
+        this.turn = turn;
+    }
+
+    public int[] getBoardPosition() {
+        return boardPosition;
+    }
+
+    public void setBoardPosition(int[] boardPosition) {
+        this.boardPosition = boardPosition;
+    }
+    
     
 }
