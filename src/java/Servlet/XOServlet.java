@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -31,9 +32,24 @@ public class XOServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+          HttpSession session = request.getSession();
+        
+        
+        
+        
         
         Table table = new Table();
         table.checkTurnIsFive();
+        table.setPlayer1Score(1);
+        table.setTieScore(0);
+        table.setPlayer2Score(5);
+        
+         session.setAttribute("player1Score", table.getPlayer1Score());
+         session.setAttribute("tieScore", table.getTieScore());
+         session.setAttribute("player2Score", table.getPlayer2Score());
+        getServletContext().getRequestDispatcher("/XO.jsp").forward(request, response);
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
