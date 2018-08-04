@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 
 *** Variables ***
-${URL}    http://localhost:8080/webapp/xo.jsp
+${URL}    http://localhost:8080/XOproject/XO.jsp
 ${BROWSER}    chrome
 
 *** Test Cases ***
