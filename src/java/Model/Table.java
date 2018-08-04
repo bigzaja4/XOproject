@@ -82,10 +82,9 @@ public class Table {
         }
         return check;
     }
+    
+  
 
-    public void markPosition() {
-        turn++;
-    }
 
    
 }
