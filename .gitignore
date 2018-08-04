@@ -1,7 +1,8 @@
 *.png
 log.html
-output.xml
+output.xml  
 report.html
 test.robot
 TestFollowTeacher.robot
 *.class
+build/
