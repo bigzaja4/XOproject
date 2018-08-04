@@ -72,6 +72,30 @@ public class Table {
     public void setBoardPosition(int[] boardPosition) {
         this.boardPosition = boardPosition;
     }
-    
+
+    public boolean isWinByHorizontal(int position,int player){
+        if(position == 0 || position == 1 || position == 2){
+            for(int i = 0;i<=2;i++){
+                if(boardPosition[i] != player){
+                    return false;
+                }
+            }
+        }
+        else if(position == 3 || position == 4 || position == 5){
+            for(int i = 3;i<=5;i++){
+                if(boardPosition[i] != player){
+                    return false;
+                }
+            }
+        }
+        else if(position == 6 || position ==7 || position == 8){
+            for(int i = 6;i<=8;i++){
+                if(boardPosition[i] != player){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
     
 }
