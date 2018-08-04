@@ -40,9 +40,9 @@ public class XOServlet extends HttpServlet {
         
         Table table = new Table();
         table.checkTurnIsFive();
-        table.setPlayer1Score(1);
+        table.setPlayer1Score(0);
         table.setTieScore(0);
-        table.setPlayer2Score(5);
+        table.setPlayer2Score(0);
         
          session.setAttribute("player1Score", table.getPlayer1Score());
          session.setAttribute("tieScore", table.getTieScore());
